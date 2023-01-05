@@ -7,7 +7,7 @@ resource "aws_lambda_function" "aggregate_lambda" {
   filename      = "aggregate.jar"
   function_name = "aggregate"
   role          = aws_iam_role.aggregate_lambda.arn
-  handler       = "example.HandlerInteger"
+  handler       = "agreggate.App"
 
   environment {
     variables = {
