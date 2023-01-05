@@ -4,7 +4,7 @@ resource "aws_sqs_queue" "aggregate_queue" {
 
 resource "aws_lambda_function" "aggregate_lambda" {
 
-  filename      = "java-basic.jar"
+  filename      = "aggregate.jar"
   function_name = "aggregate"
   role          = aws_iam_role.aggregate_lambda.arn
   handler       = "example.HandlerInteger"
